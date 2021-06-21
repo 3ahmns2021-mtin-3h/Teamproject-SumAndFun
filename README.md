@@ -1,13 +1,23 @@
-# Template2D-Unity202015f1
+# Sum and Fun
+
+### Role allocation: 
+Project Management: Pia <br>
+Audio: Jana <br>
+Graphics: Peter <br>
+Animation: David B. <br>
+Photo: Sebi <br>
+Programming: Simon E. <br>
+Video: x
+
 
 ### Project description: 
 Introduction/Project summary 
 
 ### Development platform: 
-(OS, Unity Version, Visual Studio Version, used SDKs)
+Windows 10, Unity Version 2020.1.5f1f, Visual Studio Version 2019
 
 ### Target platform: 
-WebGL, Mobile, VR Device incl. reference resolution 
+Android 
 
 ### Visuals: 
 Screenshots (concept and experience), Video
@@ -25,4 +35,4 @@ incl. progress in percent
 
 ### Lessons Learned: 
 
-Copyright by you :)
+Copyright by pklacher
