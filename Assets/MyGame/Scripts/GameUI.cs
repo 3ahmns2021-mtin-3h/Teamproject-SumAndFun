@@ -10,6 +10,14 @@ public class GameUI : MonoBehaviour
 
     private void OnEnable()
     {
+        Timer.OnTimeOut += TimeIsOut;
+        GenerateCalculation();
+    }
+
+    private void TimeIsOut()
+    {
+        //Check wheter another question is to be displayed
+        
         GenerateCalculation();
     }
 
@@ -35,5 +43,10 @@ public class GameUI : MonoBehaviour
                 zText.text = values.z.ToString();
                 break;
         }
+    }
+
+    private void OnDisable()
+    {
+        Timer.OnTimeOut -= TimeIsOut;
     }
 }
