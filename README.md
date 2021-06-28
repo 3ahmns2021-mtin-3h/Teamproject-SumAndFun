@@ -11,7 +11,8 @@ Video: x
 
 
 ### Project description: 
-A game mainly for children learning addition with easy numbers to improve their math skills. 
+A game mainly for children learning addition with easy numbers to improve their math skills.
+Two of three fields are filled in, which means that only one is free and must be filled in by drag and drop. Which field is free is randomly generated. To make the whole thing more difficult, there are different levels of difficulty in which the timer varies.
 
 ### Development platform: 
 Windows 10, Unity Version 2020.1.5f1f, Visual Studio Version 2019
