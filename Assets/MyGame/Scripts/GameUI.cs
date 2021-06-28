@@ -10,6 +10,11 @@ public class GameUI : MonoBehaviour
 
     private void OnEnable()
     {
+        GenerateCalculation();
+    }
+
+    private void GenerateCalculation()
+    {
         Vector3 values = Calculation.Addition(maxSum);
         int calculationIndex = Random.Range(0, 3);
         // 0: x + ? = z
