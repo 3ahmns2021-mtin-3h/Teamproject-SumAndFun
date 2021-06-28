@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class DragAndDrop : MonoBehaviour
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+public class DragAndDrop : UIElement
 {
     private Camera cam;
-    private Coroutine currentDrag;
+    private GraphicRaycaster raycaster;
+    private EventSystem eventSystem;
     private float distance;
 
     private void Awake()
     {
         cam = Camera.main;
+        raycaster = GetComponent<GraphicRaycaster>();
+        eventSystem = GetComponent<EventSystem>();
     }
 
     private void Update()
@@ -18,24 +22,12 @@ public class DragAndDrop : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             distance = Vector3.Distance(transform.position, cam.transform.position);
-            currentDrag = StartCoroutine(Drag());
+            currentDrag = StartCoroutine(Drag(raycaster, eventSystem, cam, distance));
         }
 
         if (Input.GetMouseButtonUp(0))
         {
             StopCoroutine(currentDrag);
-        }
-    }
-
-    private IEnumerator Drag()
-    {
-        while (true)
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            Vector3 rayPoint = ray.GetPoint(distance);
-
-            transform.position = rayPoint;
-            yield return null;
         }
     }
 }
